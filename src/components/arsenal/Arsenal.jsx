@@ -8,7 +8,7 @@ const tools = [
     role: "EDITING",
     description:
       "My primary workspace for sequencing and shaping the final story.",
-    logo: "/public/logos/premiere-pro.png",
+    logo: "/logos/premiere-pro.png",
   },
   {
     number: "02",
@@ -16,7 +16,7 @@ const tools = [
     role: "MOTION / VFX",
     description:
       "Motion graphics, compositing, animation and visual effects.",
-    logo: "/public/logos/after-effects.png",
+    logo: "/logos/after-effects.png",
 
   },
   {
@@ -25,7 +25,7 @@ const tools = [
     role: "COLOR",
     description:
       "Color grading and finishing for another level of control.",
-    logo: "/public/logos/davinci-resolve.png",
+    logo: "/logos/davinci-resolve.png",
   },
   {
     number: "04",
@@ -33,7 +33,7 @@ const tools = [
     role: "DESIGN",
     description:
       "Thumbnails, graphic elements, composition development.",
-    logo: "/public/logos/photoshop.png",
+    logo: "/logos/photoshop.png",
   },
   {
     number: "05",
@@ -41,7 +41,7 @@ const tools = [
     role: "EDITING",
     description:
       "Used for quick edits and social media content with flashy needs.",
-    logo: "/public/logos/capcut.png",
+    logo: "/logos/capcut.png",
   },
 ];
 
