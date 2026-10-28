@@ -1,0 +1,700 @@
+/* =========================================================
+   THE AGENTS
+========================================================= */
+
+.agents {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 160px 0 150px;
+
+  background:
+    radial-gradient(
+      circle at 80% 45%,
+      rgba(139, 92, 246, 0.055),
+      transparent 30%
+    ),
+    #050505;
+
+  color: #f5f5f5;
+}
+
+.agents-container {
+  width:
+    min(
+      1420px,
+      calc(100% - 120px)
+    );
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.agents-header {
+  position: relative;
+
+  margin-bottom: 100px;
+}
+
+.agents-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 60px;
+
+  color: #777;
+
+  font-size: 9px;
+
+  letter-spacing: 0.3em;
+}
+
+.agents-label span {
+  color: #8b5cf6;
+}
+
+.agents-heading {
+  display: flex;
+
+  flex-direction: column;
+
+  font-family:
+    "ClashDisplay",
+    sans-serif;
+
+  font-size:
+    clamp(
+      60px,
+      8.5vw,
+      120px
+    );
+
+  font-weight: 700;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.07em;
+
+  text-transform: uppercase;
+}
+
+.agents-heading > span {
+  color: #777;
+}
+
+.agents-heading strong {
+  color: #f5f5f5;
+
+  font-weight: inherit;
+}
+
+.agents-heading strong::after {
+  content: "";
+
+  display: inline-block;
+
+  width: 0.08em;
+  height: 0.08em;
+
+  margin-left: 0.08em;
+  margin-bottom: 0.08em;
+
+  border-radius: 50%;
+
+  background: #8b5cf6;
+
+  box-shadow:
+    0 0 20px
+    rgba(139, 92, 246, 0.8);
+}
+
+.agents-header > p {
+  max-width: 390px;
+
+  margin:
+    55px
+    0
+    0
+    auto;
+
+  color: #666;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   AGENT GRID
+========================================================= */
+
+.agents-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.agent-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.1);
+
+  border-radius: 20px;
+
+  background:
+    #0a0a0a;
+
+  transition:
+    transform 0.5s
+      cubic-bezier(.16,1,.3,1),
+    border-color 0.4s ease;
+}
+
+.agent-card:hover {
+  transform:
+    translateY(-8px);
+
+  border-color:
+    rgba(139,92,246,0.4);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.agent-image {
+  position: relative;
+
+  height: 500px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(139,92,246,0.22),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      #191919,
+      #050505
+    );
+}
+
+.agent-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 50%,
+      rgba(0,0,0,0.9) 100%
+    );
+
+  pointer-events: none;
+}
+
+.agent-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  filter:
+    grayscale(100%)
+    contrast(1.1);
+
+  transition:
+    transform 0.8s
+      cubic-bezier(.16,1,.3,1),
+    filter 0.6s ease;
+}
+
+.agent-card:hover
+.agent-image img {
+  transform:
+    scale(1.05);
+
+  filter:
+    grayscale(0%)
+    contrast(1.05);
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.agent-placeholder {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(139,92,246,0.18),
+      transparent 42%
+    );
+}
+
+.agent-placeholder::before {
+  content: "";
+
+  position: absolute;
+
+  width: 150px;
+  height: 230px;
+
+  border-radius:
+    48% 48% 42% 42%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #222,
+      #080808
+    );
+
+  filter: blur(1px);
+
+  box-shadow:
+    0 0 80px
+    rgba(139,92,246,0.12);
+}
+
+.agent-placeholder span {
+  position: relative;
+
+  z-index: 2;
+
+  color: rgba(255,255,255,0.08);
+
+  font-family:
+    "ClashDisplay",
+    sans-serif;
+
+  font-size: 70px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.agent-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(139,92,246,0.12),
+      transparent 45%
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.5s ease;
+
+  pointer-events: none;
+}
+
+.agent-card:hover
+.agent-image-overlay {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   SCANLINE
+========================================================= */
+
+.agent-scanline {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  top: 0;
+
+  height: 1px;
+
+  z-index: 5;
+
+  background:
+    rgba(139,92,246,0.7);
+
+  box-shadow:
+    0 0 15px
+    rgba(139,92,246,0.7);
+
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease;
+}
+
+.agent-card:hover
+.agent-scanline {
+  opacity: 1;
+
+  animation:
+    agentScan 2.5s
+    ease-in-out
+    infinite;
+}
+
+@keyframes agentScan {
+
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: 100%;
+  }
+
+  100% {
+    top: 0;
+  }
+
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.agent-status {
+  position: absolute;
+
+  z-index: 6;
+
+  top: 20px;
+  left: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding:
+    8px 11px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.12);
+
+  border-radius: 50px;
+
+  background:
+    rgba(5,5,5,0.65);
+
+  backdrop-filter:
+    blur(10px);
+
+  color: #777;
+
+  font-size: 7px;
+
+  letter-spacing: 0.15em;
+}
+
+.agent-status span {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #8b5cf6;
+
+  box-shadow:
+    0 0 10px
+    rgba(139,92,246,0.8);
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.agent-number {
+  position: absolute;
+
+  z-index: 6;
+
+  top: 20px;
+  right: 20px;
+
+  color: rgba(255,255,255,0.4);
+
+  font-size: 8px;
+
+  letter-spacing: 0.2em;
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.agent-info {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 25px;
+}
+
+.agent-role {
+  color: #666;
+
+  font-size: 8px;
+
+  letter-spacing: 0.18em;
+}
+
+.agent-info h3 {
+  margin:
+    9px 0 0;
+
+  font-family:
+    "ClashDisplay",
+    sans-serif;
+
+  font-size: 25px;
+
+  letter-spacing: -0.04em;
+}
+
+.agent-link {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #666;
+
+  font-size: 9px;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease;
+}
+
+.agent-link span {
+  font-size: 14px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.agent-link:hover {
+  color: #8b5cf6;
+}
+
+.agent-link:hover span {
+  transform:
+    translate(3px,-3px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.agents-footer {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 55px;
+
+  color: #444;
+
+  font-size: 8px;
+
+  letter-spacing: 0.25em;
+}
+
+.agents-footer-line {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    rgba(255,255,255,0.08);
+}
+
+.agents-footer-dot {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #8b5cf6;
+
+  box-shadow:
+    0 0 12px
+    rgba(139,92,246,0.8);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .agents-container {
+    width:
+      calc(100% - 70px);
+  }
+
+  .agents-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .agent-card:last-child {
+    grid-column:
+      span 2;
+
+    max-width: calc(50% - 7px);
+
+    margin: 0 auto;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .agents {
+    padding:
+      100px 0
+      90px;
+  }
+
+  .agents-container {
+    width:
+      calc(100% - 36px);
+  }
+
+  .agents-header {
+    margin-bottom: 65px;
+  }
+
+  .agents-label {
+    margin-bottom: 45px;
+  }
+
+  .agents-heading {
+    font-size:
+      clamp(
+        48px,
+        13.5vw,
+        70px
+      );
+  }
+
+  .agents-header > p {
+    margin:
+      45px 0
+      0;
+  }
+
+  .agents-grid {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .agent-card:last-child {
+    max-width: none;
+
+    margin: 0;
+  }
+
+  .agent-image {
+    height: 430px;
+  }
+
+  .agent-info {
+    padding: 22px;
+  }
+
+  .agent-info h3 {
+    font-size: 22px;
+  }
+
+  .agents-footer {
+    flex-wrap: wrap;
+  }
+
+  .agents-footer-line {
+    width: 100%;
+
+    flex-basis: 100%;
+
+    order: 3;
+  }
+
+}

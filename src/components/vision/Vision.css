@@ -1,0 +1,555 @@
+/* =========================================================
+   THE VISION
+========================================================= */
+
+.vision {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 170px 0 150px;
+
+  background:
+    radial-gradient(
+      circle at 75% 35%,
+      rgba(139,92,246,0.08),
+      transparent 32%
+    ),
+    #050505;
+
+  color: #f5f5f5;
+}
+
+
+/* =========================================================
+   BACKGROUND NUMBER
+========================================================= */
+
+.vision-bg-number {
+  position: absolute;
+
+  top: 30px;
+  right: -40px;
+
+  font-family:
+    "ClashDisplay",
+    sans-serif;
+
+  font-size:
+    clamp(
+      250px,
+      32vw,
+      520px
+    );
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -0.08em;
+
+  color:
+    rgba(255,255,255,0.018);
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.vision-container {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(
+      1420px,
+      calc(100% - 120px)
+    );
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.vision-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 65px;
+
+  color: #777;
+
+  font-size: 9px;
+
+  letter-spacing: 0.3em;
+}
+
+.vision-label span {
+  color: #8b5cf6;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.vision-main {
+  position: relative;
+
+  max-width: 1100px;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.vision-heading {
+  display: flex;
+
+  flex-direction: column;
+
+  font-family:
+    "ClashDisplay",
+    sans-serif;
+
+  font-size:
+    clamp(
+      70px,
+      9vw,
+      135px
+    );
+
+  font-weight: 700;
+
+  line-height: 0.79;
+
+  letter-spacing: -0.07em;
+
+  text-transform: uppercase;
+}
+
+.vision-heading span {
+  display: block;
+}
+
+.vision-outline {
+  color: transparent;
+
+  -webkit-text-stroke:
+    1px
+    rgba(255,255,255,0.55);
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.vision-divider {
+  width: 100%;
+
+  height: 1px;
+
+  margin:
+    45px 0
+    38px;
+
+  transform-origin: left;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(139,92,246,0.8),
+      rgba(255,255,255,0.08),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   SECOND HEADING
+========================================================= */
+
+.vision-second-heading {
+  display: flex;
+
+  flex-direction: column;
+
+  font-family:
+    "ClashDisplay",
+    sans-serif;
+
+  font-size:
+    clamp(
+      55px,
+      7vw,
+      105px
+    );
+
+  line-height: 0.85;
+
+  letter-spacing: -0.065em;
+
+  text-transform: uppercase;
+}
+
+.vision-second-heading span {
+  color: #777;
+}
+
+.vision-second-heading strong {
+  color: #f5f5f5;
+
+  font-weight: inherit;
+}
+
+.vision-second-heading strong::after {
+  content: "";
+
+  display: inline-block;
+
+  width: 0.08em;
+  height: 0.08em;
+
+  margin-left: 0.08em;
+
+  margin-bottom: 0.08em;
+
+  border-radius: 50%;
+
+  background: #8b5cf6;
+
+  box-shadow:
+    0 0 20px
+    rgba(139,92,246,0.9);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.vision-description {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 25px;
+
+  max-width: 520px;
+
+  margin:
+    70px
+    0
+    90px
+    auto;
+}
+
+.vision-description-line {
+  flex-shrink: 0;
+
+  width: 1px;
+
+  height: 75px;
+
+  background:
+    linear-gradient(
+      #8b5cf6,
+      transparent
+    );
+}
+
+.vision-description p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   PRINCIPLES
+========================================================= */
+
+.vision-principles {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  border-top:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,0.08);
+}
+
+
+.vision-principle {
+  position: relative;
+
+  min-height: 260px;
+
+  padding:
+    32px 30px
+    35px 0;
+
+  border-right:
+    1px solid
+    rgba(255,255,255,0.08);
+}
+
+.vision-principle:not(:first-child) {
+  padding-left: 30px;
+}
+
+.vision-principle:last-child {
+  border-right: none;
+}
+
+
+.principle-number {
+  color: #8b5cf6;
+
+  font-size: 8px;
+
+  letter-spacing: 0.2em;
+}
+
+
+.vision-principle h3 {
+  margin:
+    45px 0
+    15px;
+
+  font-family:
+    "ClashDisplay",
+    sans-serif;
+
+  font-size: 30px;
+
+  letter-spacing: -0.04em;
+}
+
+
+.vision-principle p {
+  max-width: 240px;
+
+  margin: 0;
+
+  color: #666;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+.principle-arrow {
+  position: absolute;
+
+  right: 25px;
+  top: 30px;
+
+  color: #444;
+
+  font-size: 18px;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.vision-principle:hover
+.principle-arrow {
+  color: #8b5cf6;
+
+  transform:
+    translate(3px, -3px);
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.vision-bottom {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 45px;
+
+  color: #444;
+
+  font-size: 8px;
+
+  letter-spacing: 0.3em;
+}
+
+.vision-bottom div {
+  width: 80px;
+
+  height: 1px;
+
+  background:
+    rgba(255,255,255,0.12);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .vision {
+    padding:
+      120px
+      0
+      110px;
+  }
+
+  .vision-container {
+    width:
+      calc(100% - 70px);
+  }
+
+  .vision-heading {
+    font-size:
+      clamp(
+        65px,
+        11vw,
+        100px
+      );
+  }
+
+  .vision-description {
+    margin-left: 20%;
+  }
+
+  .vision-principles {
+    grid-template-columns: 1fr;
+  }
+
+  .vision-principle {
+    min-height: 200px;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      rgba(255,255,255,0.08);
+
+    padding:
+      28px 0;
+  }
+
+  .vision-principle:not(:first-child) {
+    padding-left: 0;
+  }
+
+  .vision-principle:last-child {
+    border-bottom: none;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .vision {
+    padding:
+      100px
+      0
+      90px;
+  }
+
+  .vision-container {
+    width:
+      calc(100% - 36px);
+  }
+
+  .vision-label {
+    margin-bottom: 45px;
+  }
+
+  .vision-heading {
+    font-size:
+      clamp(
+        52px,
+        15vw,
+        76px
+      );
+
+    line-height: 0.84;
+  }
+
+  .vision-divider {
+    margin:
+      35px 0
+      30px;
+  }
+
+  .vision-second-heading {
+    font-size:
+      clamp(
+        45px,
+        12vw,
+        65px
+      );
+  }
+
+  .vision-description {
+    margin:
+      55px
+      0
+      65px;
+  }
+
+  .vision-description p {
+    font-size: 13px;
+  }
+
+  .vision-principle h3 {
+    margin-top: 30px;
+  }
+
+  .vision-bg-number {
+    right: -80px;
+
+    font-size: 300px;
+  }
+
+  .vision-bottom {
+    flex-wrap: wrap;
+
+    gap: 12px;
+  }
+
+}
