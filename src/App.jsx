@@ -1,4 +1,4 @@
-import Navbar from "./components/layout/Navbar";
+import Navbar from "./components/layout/navbar.jsx";
 import Hero from "./components/hero/Hero";
 import SelectedWorks from "./components/works/SelectedWorks";
 import Vision from "./components/vision/Vision";
